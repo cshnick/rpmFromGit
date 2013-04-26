@@ -1,0 +1,55 @@
+BUILD_REQUIRES=$(cat <<'EOF'
+BuildRequires:  gcc-c++ libtool autoconf
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(xtables)
+BuildRequires:  pkgconfig(gnutls)
+BuildRequires:  readline-devel
+BuildRequires:  openvpn
+
+%if 0%{?suse_version} >= 1210
+%{?systemd_requires}
+%else
+Requires:       systemd
+%endif
+EOF)
+
+DESCRIPTION=$(cat <<'EOF'
+BuildRequires:  gcc-c++ libtool autoconf
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(xtables)
+BuildRequires:  pkgconfig(gnutls)
+BuildRequires:  readline-devel
+BuildRequires:  openvpn
+EOF)
+
+SUB_PACKAGES=$(cat <<'EOF'
+BuildRequires:  gcc-c++ libtool autoconf
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(xtables)
+BuildRequires:  pkgconfig(gnutls)
+BuildRequires:  readline-devel
+BuildRequires:  openvpn
+EOF)
+
+FILES=$(cat <<'EOF'
+BuildRequires:  gcc-c++ libtool autoconf
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(xtables)
+BuildRequires:  pkgconfig(gnutls)
+BuildRequires:  readline-devel
+BuildRequires:  openvpn
+EOF)
+
+FILES_SUB=$(cat <<'EOF'
+BuildRequires:  gcc-c++ libtool autoconf
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(xtables)
+BuildRequires:  pkgconfig(gnutls)
+BuildRequires:  readline-devel
+BuildRequires:  openvpn
+EOF)

@@ -1,0 +1,111 @@
+Name: connman
+Summary: Connection Manager
+Version: 1.10
+Release: 1
+Group: Communications/ConnMan
+License: GPLv2
+URL: http://connman.net/
+Sources:
+    - http://www.kernel.org/pub/linux/network/connman/%{name}-%{version}.tar.xz
+ExtraSources:
+    - connman.tracing;%{_sysconfdir}/tracing/connman/
+    - main.conf;%{_sysconfdir}/connman/
+Patches:
+    - 0001-Enable-tracing-with-config-file-for-connman.patch
+    - 0002-Restart-connman-always-when-it-exits.patch
+Description: |
+    Connection Manager provides a daemon for managing Internet connections
+    within embedded devices running the Linux operating system.
+
+Requires:
+    - dbus >= 1.4
+    - wpa_supplicant >= 0.7.1
+    - bluez
+    - ofono
+    - pacrunner
+    # Require default configs with
+    # connman to provide e.g. ntp servers by default
+    - connman-configs
+    - systemd
+RequiresPreUn:
+    - systemd
+RequiresPost:
+    - systemd
+RequiresPostUn:
+    - systemd
+
+PkgBR:
+    - openconnect
+    - openvpn
+    - readline-devel
+PkgConfigBR:
+    - xtables
+    - glib-2.0 >= 2.28
+    - gthread-2.0 >= 2.16
+    - dbus-1 >= 1.4
+    - gnutls
+
+Configure: configure
+ConfigOptions:
+    - --enable-threads
+    - --enable-ethernet=builtin
+    - --enable-wifi=builtin
+    - --enable-bluetooth=builtin
+    - --enable-ofono=builtin
+    - --enable-openconnect=builtin
+    - --enable-openvpn=builtin
+    - --enable-loopback=builtin
+    - --enable-pacrunner=builtin
+    - --enable-client
+    - --enable-test
+    - --with-systemdunitdir=/%{_lib}/systemd/system
+NoSystemdService: True
+
+Files:
+    - "%doc AUTHORS COPYING ChangeLog README"
+    - "%{_sbindir}/*"
+    - "%{_libdir}/%{name}/scripts/*"
+    - "%config %{_sysconfdir}/dbus-1/system.d/*.conf"
+    - "/%{_lib}/systemd/system/connman.service"
+    - "/%{_lib}/systemd/system/network.target.wants/connman.service"
+
+SubPackages:
+    - Name: devel
+      Summary: Development files for Connection Manager
+      Group: Development/Libraries
+      Description: connman-devel contains development files for use with connman.
+      Files:
+        - "%doc AUTHORS COPYING"
+        - "%{_includedir}/%{name}/*.h"
+        - "%{_libdir}/pkgconfig/*.pc"
+
+    - Name: test
+      Summary: Test Scripts for Connection Manager
+      Group: Development/Tools
+      Description: Scripts for testing Connman and its functionality
+      Requires:
+        - dbus-python
+        - pygobject2
+      Files:
+        - "%{_libdir}/%{name}/test/*"
+
+    - Name: tracing
+      Summary: Configuration for Connection Manager to enable tracing
+      Group: Development/Tools
+      Description: Will enable tracing for ConnMan
+      Files:
+        - "%config %{_sysconfdir}/tracing/connman"
+
+    # Configs package for connman. If vendor wants to change these settings
+    # they should install a package that provides "connman-configs".
+    - Name: configs-mer
+      Summary: Package to provide default configs for connman
+      Group: Development/Tools
+      Description: |
+        This package provides default configs for connman, such as
+        FallbackTimeservers.
+      Provides: 
+        - connman-configs
+      Files:
+        - "%config %{_sysconfdir}/connman/main.conf"
+

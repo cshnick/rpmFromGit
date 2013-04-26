@@ -1,0 +1,13 @@
+make --no-print-directory install-am
+ /usr/bin/mkdir -p '/usr/sbin'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c src/connmand '/usr/sbin'
+libtool: install: /usr/bin/install -c src/connmand /usr/sbin/connmand
+ /usr/bin/mkdir -p '/etc/dbus-1/system.d'
+ /usr/bin/install -c -m 644 src/connman.conf '/etc/dbus-1/system.d'
+ /usr/bin/mkdir -p '/usr/include/connman'
+ /usr/bin/install -c -m 644 include/types.h include/log.h include/plugin.h include/notifier.h include/service.h include/resolver.h include/ipconfig.h include/device.h include/network.h include/inet.h include/storage.h include/provision.h include/session.h include/ipaddress.h include/agent.h include/inotify.h '/usr/include/connman'
+ /usr/bin/mkdir -p '/usr/include/connman'
+ /usr/bin/install -c -m 644 include/version.h '/usr/include/connman'
+ /usr/bin/mkdir -p '/usr/lib64/pkgconfig'
+ /usr/bin/install -c -m 644 connman.pc '/usr/lib64/pkgconfig'
+ /usr/bin/mkdir -p '/usr/lib64/connman/scripts'

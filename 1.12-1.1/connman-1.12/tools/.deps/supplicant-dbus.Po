@@ -1,0 +1,158 @@
+tools/supplicant-dbus.o: tools/supplicant-dbus.c config.h \
+ /usr/include/errno.h /usr/include/features.h /usr/include/stdc-predef.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h /usr/include/stdlib.h \
+ /usr/lib64/gcc/x86_64-suse-linux/4.7/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/bits/time.h /usr/include/bits/select2.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/bits/stdlib.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/bits/string3.h /usr/include/dbus-1.0/dbus/dbus.h \
+ /usr/lib64/dbus-1.0/include/dbus/dbus-arch-deps.h \
+ /usr/include/dbus-1.0/dbus/dbus-macros.h \
+ /usr/include/dbus-1.0/dbus/dbus-address.h \
+ /usr/include/dbus-1.0/dbus/dbus-types.h \
+ /usr/include/dbus-1.0/dbus/dbus-errors.h \
+ /usr/include/dbus-1.0/dbus/dbus-protocol.h \
+ /usr/include/dbus-1.0/dbus/dbus-bus.h \
+ /usr/include/dbus-1.0/dbus/dbus-connection.h \
+ /usr/include/dbus-1.0/dbus/dbus-memory.h \
+ /usr/include/dbus-1.0/dbus/dbus-message.h \
+ /usr/lib64/gcc/x86_64-suse-linux/4.7/include/stdarg.h \
+ /usr/include/dbus-1.0/dbus/dbus-shared.h \
+ /usr/include/dbus-1.0/dbus/dbus-misc.h \
+ /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
+ /usr/include/dbus-1.0/dbus/dbus-server.h \
+ /usr/include/dbus-1.0/dbus/dbus-signature.h \
+ /usr/include/dbus-1.0/dbus/dbus-syntax.h \
+ /usr/include/dbus-1.0/dbus/dbus-threads.h tools/supplicant-dbus.h
+
+config.h:
+
+/usr/include/errno.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/stdlib.h:
+
+/usr/lib64/gcc/x86_64-suse-linux/4.7/include/stddef.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/byteswap-16.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/bits/select2.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/bits/stdlib.h:
+
+/usr/include/string.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/bits/string.h:
+
+/usr/include/bits/string2.h:
+
+/usr/include/bits/string3.h:
+
+/usr/include/dbus-1.0/dbus/dbus.h:
+
+/usr/lib64/dbus-1.0/include/dbus/dbus-arch-deps.h:
+
+/usr/include/dbus-1.0/dbus/dbus-macros.h:
+
+/usr/include/dbus-1.0/dbus/dbus-address.h:
+
+/usr/include/dbus-1.0/dbus/dbus-types.h:
+
+/usr/include/dbus-1.0/dbus/dbus-errors.h:
+
+/usr/include/dbus-1.0/dbus/dbus-protocol.h:
+
+/usr/include/dbus-1.0/dbus/dbus-bus.h:
+
+/usr/include/dbus-1.0/dbus/dbus-connection.h:
+
+/usr/include/dbus-1.0/dbus/dbus-memory.h:
+
+/usr/include/dbus-1.0/dbus/dbus-message.h:
+
+/usr/lib64/gcc/x86_64-suse-linux/4.7/include/stdarg.h:
+
+/usr/include/dbus-1.0/dbus/dbus-shared.h:
+
+/usr/include/dbus-1.0/dbus/dbus-misc.h:
+
+/usr/include/dbus-1.0/dbus/dbus-pending-call.h:
+
+/usr/include/dbus-1.0/dbus/dbus-server.h:
+
+/usr/include/dbus-1.0/dbus/dbus-signature.h:
+
+/usr/include/dbus-1.0/dbus/dbus-syntax.h:
+
+/usr/include/dbus-1.0/dbus/dbus-threads.h:
+
+tools/supplicant-dbus.h:
