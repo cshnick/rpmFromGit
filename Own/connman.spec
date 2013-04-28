@@ -1,4 +1,4 @@
-#==#Name:		connman
+Name:		connman
 Version:	1.12
 Release:	1.0
 License:	GPL-2.0
